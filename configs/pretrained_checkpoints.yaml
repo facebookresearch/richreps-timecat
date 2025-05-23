@@ -1,0 +1,40 @@
+# resnet50_sfadamw pretrained on imagenet with random seeds: [2,  550, 23,  477, 8529]
+
+supervisedimagenet_resnet50_sfadamw_run0:
+  arch: [resnet50]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_full/checkpoint_run0.pth]
+supervisedimagenet_resnet50_sfadamw_run1:
+  arch: [resnet50 ]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_full/checkpoint_run1.pth]
+supervisedimagenet_resnet50_sfadamw_run2:
+  arch: [resnet50 ]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_full/checkpoint_run2.pth]
+supervisedimagenet_resnet50_sfadamw_run3:
+  arch: [resnet50 ]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_full/checkpoint_run3.pth]
+supervisedimagenet_resnet50_sfadamw_run4:
+  arch: [resnet50 ]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_full/checkpoint_run4.pth]
+
+
+supervisedimagenet_resnet50_sfadamw_2_step200k:
+  arch: [resnet50, resnet50]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_200k/checkpoint_run0.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_200k/checkpoint_run1.pth]
+
+
+supervisedimagenet_resnet50_sfadamw_4_step100k:
+  arch: [resnet50, resnet50, resnet50, resnet50]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_100k/checkpoint_run0.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_100k/checkpoint_run1.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_100k/checkpoint_run2.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_100k/checkpoint_run3.pth]
+
+
+supervisedimagenet_resnet50_sfadamw_5_step80k:
+  arch: [resnet50, resnet50, resnet50, resnet50, resnet50]
+  pretrained: [checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_80k/checkpoint_run0.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_80k/checkpoint_run1.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_80k/checkpoint_run2.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_80k/checkpoint_run3.pth,
+              checkpoints/supervised_pretrain/resnet50_sfadamw_imagenet1k_supervised/checkpoints_80k/checkpoint_run4.pth]

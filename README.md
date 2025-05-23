@@ -140,3 +140,5 @@ If you find this code useful for your research, please consider citing our work:
 To Be Added
 ```
 
+## License
+Copyright (c) Meta Platforms, Inc. and affiliates.

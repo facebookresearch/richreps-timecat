@@ -20,7 +20,7 @@ Xingyu Alice Yang, [Jianyu Zhang](https://www.jianyuzhang.com/),  [Léon Bottou]
 
 
 ## Installation
-### Set Up A Python Virtual Environment
+### Set Up Python Virtual Environment
 We provide instructons to set up a virtual environment using `uv`, specified by `pyproject.yaml`.
 1. Clone this repository
 ```
@@ -76,7 +76,6 @@ You can get pretrained checkpoints by
 
 
 ## Datasets
-
 We evaluate transfer using the following datasets: 
 - [ImageNet-1K [~130 GB]](https://www.image-net.org/index.php) 
 - [iNaturalist18 [120GB]](https://ml-inat-competition-datasets.s3.amazonaws.com/2018/train_val2018.tar.gz)

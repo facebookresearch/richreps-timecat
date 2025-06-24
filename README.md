@@ -1,19 +1,33 @@
-## These are Not All the Features You Are Looking For: A Fundamental Bottleneck of Supervised Pretraining
-
-Official Pytorch implementation of Method
-By Alice (Xingyu) Yang, [Jianyu Zhang](https://www.jianyuzhang.com/),  [Léon Bottou](https://leon.bottou.org/)
-
+# These Are Not All the Features You Are Looking For: A Fundamental Bottleneck in Supervised Pretraining
+### Pytorch Implementation of Time-Cat Experiments
+Xingyu Alice Yang, [Jianyu Zhang](https://www.jianyuzhang.com/),  [Léon Bottou](https://leon.bottou.org/)
 
 <p align="center" width="500" style="background-color: white; padding: 0px; color: #333333;">
   <image src=figures/time-cat-diagram-v2.png>
   <!-- .slide: data-background-color="white" -->
-  <em>Figure 1: Richer Feature Representations via Concatenation during Fixed-Time Pretraining</em>
+  <em><strong>Figure 1: Richer Feature Representations via Concatenation during Fixed-Time Pretraining</strong></em>
 </p>
 
 
-## Set Up A Python Virtual Environment
-We provide instructons to set up a virtual environment using `uv`, specified by `pyproject.yaml`.
+### [[Paper]](https://arxiv.org/abs/2506.18221)
 
+> <p align="center">  <figcaption align="center"><b></b></figcaption>
+> Transfer learning is a cornerstone of modern machine learning, promising a way to adapt models pretrained on a broad mix of data to new tasks with minimal new data. However, a significant challenge remains in ensuring that transferred features are sufficient to handle unseen datasets, amplified by the difficulty of quantifying whether two tasks are "related". To address these challenges, we evaluate model transfer from a pretraining mixture to each of its component tasks, assessing whether pretrained features can match the performance of task-specific direct training. We identify a fundamental limitation in deep learning models -- an "information saturation bottleneck" -- where networks fail to learn new features once they encode similar competing features during training. When restricted to learning only a subset of key features during pretraining, models will permanently lose critical features for transfer and perform inconsistently on data distributions, even components of the training mixture. Empirical evidence from published studies suggests that this phenomenon is pervasive in deep learning architectures -- factors such as data distribution or ordering affect the features that current representation learning methods can learn over time. This study suggests that relying solely on large-scale networks may not be as effective as focusing on task-specific training, when available. We propose richer feature representations as a potential solution to better generalize across new datasets and, specifically, present existing methods alongside a novel approach, the initial steps towards addressing this challenge.
+> 
+
+
+<br>
+
+
+## Installation
+### Quick Start
+Run script to set up environment and download datasets, checkpoints
+```
+chmod +x setup.sh
+./setup.sh
+```
+### (Alternative) Set Up Python Virtual Environment
+We provide instructons to set up a virtual environment using `uv`, specified by `pyproject.yaml`.
 1. Clone this repository
 ```
 git clone https://github.com/richreps-timecat
@@ -23,13 +37,13 @@ cd richreps-timecat
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
-3. From the git repo, create and set up a environment
+3. Set up environment
 ```
 uv venv
 source .venv/bin/activate
 uv sync
 ```
-You can activate your new environment using
+Activate your new environment using
 ```
 source ./.venv/bin/activate
 ```
@@ -63,7 +77,6 @@ You can get pretrained checkpoints by
 
 
 ## Datasets
-
 We evaluate transfer using the following datasets: 
 - [ImageNet-1K [~130 GB]](https://www.image-net.org/index.php) 
 - [iNaturalist18 [120GB]](https://ml-inat-competition-datasets.s3.amazonaws.com/2018/train_val2018.tar.gz)
@@ -88,14 +101,14 @@ Download and extract `ImageNet-1k` and `iNaturalist18` datasets to `data/imagene
 ```
 
 
-## Supervised transfer learning (ResNet)
+## Supervised Transfer Learning (ResNet50)
 
 
 ### Download (ImageNet1k) pretrained checkpoints:
 You can get pretrained checkpoints either:
 - by automatically download according to ```python tools/download.py``` or
 - by manually download according to [download_checkpoint.md](download_checkpoint.md) or 
-- by training from scratch according to [download_checkpoint.md](download_checkpoint.md)
+- by training from scratch according to [download_checkpoint.md](downloaad_checkpoint.md)
 
 
 The resulting folder structure should be: 
@@ -136,7 +149,14 @@ We **concatenate** multiple sets of ResNet50 features (separately pretrained on 
 ## Citation
 If you find this code useful for your research, please consider citing our work:
 ```
-To Be Added
+@misc{yang2025features,
+    title={These are Not All the Features You are Looking For: A Fundamental Bottleneck In Supervised Pretraining},
+    author={Xingyu Alice Yang and Jianyu Zhang and Léon Bottou},
+    year={2025},
+    eprint={2506.18221},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
 ```
 
 ## License

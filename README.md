@@ -20,7 +20,13 @@ Xingyu Alice Yang, [Jianyu Zhang](https://www.jianyuzhang.com/),  [Léon Bottou]
 
 
 ## Installation
-### Set Up Python Virtual Environment
+### Quick Start
+Run script to set up environment and download datasets, checkpoints
+```
+chmod +x setup.sh
+./setup.sh
+```
+### (Alternative) Set Up Python Virtual Environment
 We provide instructons to set up a virtual environment using `uv`, specified by `pyproject.yaml`.
 1. Clone this repository
 ```
@@ -40,11 +46,6 @@ uv sync
 Activate your new environment using
 ```
 source ./.venv/bin/activate
-```
-### Quick Start
-```
-chmod +x setup.sh
-./setup.sh
 ```
 
 ### (Optional) Shortcuts
